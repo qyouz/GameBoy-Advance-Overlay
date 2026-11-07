@@ -1,74 +1,63 @@
-# GameBoy Advance Overlay
+# Game Boy Advance Overlay for RetroArch
 
-![My Image](ow.jpg)
+A GBA overlay for RetroArch on 20:9 Android devices, based on MaestroSistema's original GameBoy Advance Overlay.
 
-This is a GameBoy Advance overlay for RetroArch, made for modern 20:9 (2400x1080) screen Android devices.
+![Frosted Artic GBA overlay with a larger D-pad](gba-artic-big-DPad-frosted.png)
 
-I'm open to suggestions!
+## What's changed
 
-# Installation
+- Enlarged the D-pad and its touch targets.
+- Removed the combined-direction touch zones to reduce accidental inputs and improve directional accuracy.
+- Added a realistic frosted GBA shell preset, available as `gba_artic_frosted.cfg`.
 
-<b>1.</b> Download latest release.
+## Installation
 
-<b>2.</b> Extract and copy the <b>gba</b> folder inside: 
-<i>"RetroArch/overlays/misc"</i> (Or any folder you set for overlays in RetroArch settings) and overwrite if asked.
+1. [Download this fork as a ZIP](https://github.com/qyouz/GameBoy-Advance-Overlay/archive/refs/heads/main.zip) and extract it.
+2. Copy the extracted `.cfg` and `.png` files into a `gba` folder under `RetroArch/overlays/misc`, or under the overlay directory you configured in RetroArch. Keep the presets and their images in the same folder.
+3. Open RetroArch and start a GBA game. The original author recommends the mGBA core. Set the following options in the RetroArch menu.
 
-<b>3.</b> Open RetroArch and boot any GBA game (the mGBA core is recommended), go into the menu and change these settings:
+   | Menu | Setting | Value |
+   | --- | --- | --- |
+   | Video | Enable Fullscreen Over Notch in Android Devices | On |
+   | Video → Scaling | Integer Scale | On |
+   | Video → Scaling | Aspect Ratio | Custom |
+   | Video → Scaling | Custom Aspect Ratio (Width) | 1200 (5×) |
+   | Video → Scaling | Custom Aspect Ratio (Height) | 800 (5×) |
+   | Video → Scaling | Crop Overscan (Restart Required) | On |
+   | On-Screen Display → On-Screen Overlay | Display Overlay | On |
+   | On-Screen Display → On-Screen Overlay | Auto-Scale Overlay | Off |
+   | On-Screen Display → On-Screen Overlay | Overlay Preset | Select a `.cfg` file from the `gba` folder |
+   | On-Screen Display → On-Screen Overlay | Overlay Opacity | 1.00 |
+   | On-Screen Display → On-Screen Overlay | (Landscape) Overlay Scale | 1.000 |
 
-<b>Video:</b>
-- Enable fullscreen over notch in Android devices <b>"ON"</b>
+   Choose `gba_artic.cfg`, `gba_black.cfg`, `gba_orange.cfg`, `gba_purple.cfg`, or `gba_artic_frosted.cfg`.
 
-<b>Video -> Scaling:</b>
-- Integer Scale <b>"ON"</b>
-- Aspect Ratio <b>"Custom"</b>
-- Custom Aspect Ratio (Width) <b>"1200 (5x)"</b>
-- Custom Aspect Ratio (Height) <b>"800 (5x)"</b>
-- Crop Overscan (Restart Required) <b>"ON"</b>
+4. Open **Quick Menu → Overrides → Save Core Overrides**, then restart RetroArch.
 
-<b>On-Screen Display -> On-Scren Overlay:</b>
-- Display Overlay <b>"ON"</b>
-- Auto-Scale Overlay <b>"OFF"</b>
-- Overlay Preset <b>"gba"</b> (Select the <b>gba.cfg</b> or <b>gba_alt.cfg"</b> file found in <b>gba</b> folder)
-- Overlay Opacity <b>"1.00"</b>
-- (Landscape) Overlay Scale <b>"1.000"</b>
-  
-<b>4.</b> Go to <b>Quick Menu -> Ovverides</b> and <b>Save Core Overrides</b> then restart RetroArch.
- 
-<b>5.</b> Play!
+These settings are intended for 20:9 displays at 2400 × 1080. Other aspect ratios and resolutions may require adjustments.
 
-<b>NOTE:</b>
-<b>THESE SETTINGS ARE OPTIMAL FOR 20:9, 2400x1080 RESOLUTION PHONES, FOR DIFFERENT ASPECT RATIO AND RESOLUTIONS YOU MAY HAVE TO TWEAK SOME SETTINGS.</b>
-  
-<b>Optional Settings:</b>
-  
-If you use mGBA core i reccomend this core options:
-- Use BIOS File if Found (Restart) <b>"ON"</b> (If you have BIOS files)
-- Skip BIOS Intro (Restart) <b>"OFF"</b>
-- Color Correction <b>"Game Boy Advance"</b>
-- Interframe Blending <b>"LCD Ghosting (Accurate)"</b>
-- Low Pass Filter <b>"ON"</b>
-  
-I also reccomed using a <b>Video Shader</b> like <b>dot.glslp</b> found in <i>"shaders_glsl/handheld/"</i> (Or <i>"shadrs_slang/handheld/dot.slangp"</i> if you use Vulkan video driver)
+### Optional settings
 
-# Usage
+The original author suggests these mGBA core options.
 
-![My Image](usage.png)
+- **Use BIOS File if Found (Restart)** — On, if you have a BIOS file
+- **Skip BIOS Intro (Restart)** — Off
+- **Color Correction** — Game Boy Advance
+- **Interframe Blending** — LCD Ghosting (Accurate)
+- **Low Pass Filter** — On
 
-<b>NOTE: Rewind and AI Service must be configured in RA settings to make them work in the overlay!</b>
+The original author also suggests the `dot.glslp` video shader in `shaders_glsl/handheld/`, or `dot.slangp` in `shaders_slang/handheld/` when using Vulkan.
 
-Touch the GameBoy Advance (or the Libretro RetroArch logo if you use the alternative background) logo to make all function buttons invisible (they can stil be pressed), touch again to make them visible.
+## Usage
 
-# Donation
-If you like my work, please consider a small donation.
+![Overlay controls and shortcuts](usage.png)
 
-You can donate with <a href="https://paypal.me/maestrosistema?country.x=IT&locale.x=it_IT"><b>PayPal</b></a>.
+Tap the Game Boy Advance logo to hide or show the function buttons. The buttons still respond to touch when hidden. Configure Rewind and AI Service in RetroArch to use their overlay shortcuts.
 
-Thank You!
+## Credits
 
-# Special Thanks
-RetroArch Team
+- Original overlay by MaestroSistema. [Original project](https://github.com/maestrosistema/GameBoy-Advance-Overlay)
+- Modified by Qyouz.
+- Special thanks to the RetroArch team.
 
-# Disclaimer
-<b>Nintendo GameBoy</b> is a trademark of <b>Nintendo Co., Ltd</b>
-
-<b>Android</b> is a trademark of <b>Google LLC</b>
+Game Boy is a trademark of Nintendo Co., Ltd. Android is a trademark of Google LLC.
