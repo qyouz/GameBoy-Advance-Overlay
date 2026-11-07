@@ -1,8 +1,8 @@
 # Game Boy Advance Overlay for RetroArch
 
-A GBA overlay for RetroArch on 20:9 Android devices, based on MaestroSistema's original GameBoy Advance Overlay.
+![Frosted Artic GBA overlay with a larger D-pad in RetroArch](demo.jpg)
 
-![Frosted Artic GBA overlay with a larger D-pad](gba-artic-big-DPad-frosted.png)
+A GBA overlay for RetroArch on 20:9 Android devices, based on MaestroSistema's original GameBoy Advance Overlay.
 
 ## What's changed
 
